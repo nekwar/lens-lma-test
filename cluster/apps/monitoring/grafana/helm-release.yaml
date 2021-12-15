@@ -106,7 +106,7 @@ spec:
     serviceMonitor:
       enabled: true
     ingress:
-      enabled: true
+      enabled: false
       ingressClassName: "nginx"
       hosts:
         - "grafana.${SECRET_DOMAIN}"

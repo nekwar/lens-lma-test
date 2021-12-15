@@ -21,7 +21,7 @@ spec:
       enabled: true
       replicaCount: 1
       ingress:
-         enabled: true
+         enabled: false
          ingressClassName: "nginx"
          hosts:
            - host: "goldilocks.${SECRET_DOMAIN}"

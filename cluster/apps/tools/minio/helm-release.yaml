@@ -43,7 +43,7 @@ spec:
             port: 9000
     ingress:
       main:
-        enabled: true
+        enabled: false
         ingressClassName: "nginx"
         hosts:
           - host: "minio.${SECRET_DOMAIN}"
