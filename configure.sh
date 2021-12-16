@@ -44,7 +44,7 @@ main() {
             > "${PROJECT_DIR}/cluster/base/cluster-secrets.sops.yaml"
         sops --encrypt --in-place "${PROJECT_DIR}/cluster/base/cluster-secrets.sops.yaml"
         sops --encrypt --in-place "${PROJECT_DIR}/cluster/apps/monitoring/thanos/secret.sops.yaml"
-        sops --encrypt --in-place "${PROJECT_DIR}/cluster/apps/tools/minio/secret.sops.yaml"
+        sops --encrypt --in-place "${PROJECT_DIR}/cluster/apps/tools/minio/secret.sops-op.yaml"
         sops --encrypt --in-place "${PROJECT_DIR}/cluster/apps/monitoring/botkube/secret.sops.yaml"
         sops --encrypt --in-place "${PROJECT_DIR}/cluster/apps/monitoring/uptimerobot-heartbeat/secret.sops.yaml"
     fi
