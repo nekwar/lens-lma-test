@@ -36,6 +36,7 @@ spec:
       type: ClusterIP
       clusterIP: ~
       port: 9000
+    existingSecret: minio-helm-values 
     ingress:
       enabled: false
       ingressClassName: "nginx"
@@ -66,7 +67,7 @@ spec:
       - name: thanos
         policy: none
         purge: false
-  valuesFrom:
-    - kind: Secret
-      name: "minio-helm-values"
-      optional: false
+        #  valuesFrom:
+        #- kind: Secret
+        #name: "minio-helm-values"
+        #optional: false
