@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: kube-prometheus-stack
+  name: kube-prometheus
   namespace: monitoring
 spec:
   interval: 5m
@@ -16,7 +16,7 @@ spec:
         namespace: flux-system
       interval: 5m
   values:
-    fullnameOverride: prometheus
+          #fullnameOverride: prometheus
     alertmanager:
       config:
         global:
