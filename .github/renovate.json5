@@ -3,14 +3,17 @@
   "semanticCommits": "enabled",
   "dependencyDashboard": true,
   "dependencyDashboardTitle": "Renovate Dashboard",
-  "suppressNotifications": "prIgnoreNotification",
+  "suppressNotifications": ["prIgnoreNotification"],
   "rebaseWhen": "conflicted",
   "helm-values": {
-    "fileMatch": "cluster/.+/helm-release\\.yaml$"
-    
+    "fileMatch": [
+      "cluster/.+/helm-release\\.yaml$"
+    ]
   },
   "kubernetes": {
-    "fileMatch": "cluster/.+\\.yaml$",
+    "fileMatch": [
+      "cluster/.+\\.yaml$"
+    ],
     "ignorePaths": [
       "cluster/base/"
     ],
@@ -27,7 +30,6 @@
       ],
       "datasourceTemplate": "helm"
     },
-    
   ],
   "packageRules": [
     // setup datasources
